@@ -1,0 +1,5 @@
+Request: GET localhost:3000/task/1
+Result: {"id":1,"title":"Wake up","completed":true,"priority":"high","createdAt":"2025-10-31T18:00:00.000Z"}
+
+Request: GET localhost:3000/task/0
+Result: {"error":"Task not found"}
