@@ -44,7 +44,10 @@ router.get("/tasks", (req, res) => {
 });
 
 router.get("/task/:id", (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = Number(req.params.id);
+  if (!Number.isInteger(id) || id < 0) {
+    res.status(400).json({ error: "Invalid ID format" });
+  }
   const task = tasks.find((t) => t.id === id);
 
   if (!task) {

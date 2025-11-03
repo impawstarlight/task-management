@@ -1,0 +1,12 @@
+Request: GET localhost:3000/task/1
+Result: 200 {"id":1,"title":"Wake up","completed":true,"priority":"high","createdAt":"2025-10-31T18:00:00.000Z"}
+
+Request: GET localhost:3000/task/0
+Result: 404 {"error":"Task not found"}
+
+Request: GET localhost:3000/task/999
+Result: 404 {"error":"Task not found"}
+
+Request: GET localhost:3000/task/abc
+Result: 400 {"error":"Invalid ID format"}
+
